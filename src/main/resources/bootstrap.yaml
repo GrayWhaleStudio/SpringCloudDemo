@@ -1,0 +1,23 @@
+spring:
+  application:
+		# 如果有这个name，那么dataId就是 example.yaml
+    name: example
+  profiles:
+    active: local # 切换环境
+  cloud:
+    nacos:
+      config:
+        server-addr: 127.0.0.1:8848
+        # namespace: 填命名空间id
+        file-extension: yaml
+        group: DEFAULT_GROUP
+        refresh-enabled: true
+        # 如果开启认证的话需要用户名和密码
+        # username:
+        # password:
+      discovery:
+        server-addr: 127.0.0.1:8848
+        # namespace: 填命名空间id
+        # 如果开启认证的话需要用户名和密码
+        # username:
+        # password:
